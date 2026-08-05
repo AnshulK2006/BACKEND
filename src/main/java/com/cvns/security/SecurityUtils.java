@@ -1,0 +1,2 @@
+package com.cvns.security;import org.springframework.security.core.context.SecurityContextHolder;import org.springframework.stereotype.Component;import com.cvns.custom_exceptions.ApiException;import com.cvns.entities.User;
+@Component public class SecurityUtils{public User currentUser(){Object p=SecurityContextHolder.getContext().getAuthentication()==null?null:SecurityContextHolder.getContext().getAuthentication().getPrincipal();if(!(p instanceof CustomUserDetails d))throw new ApiException("Authentication required");return d.getUser();}}

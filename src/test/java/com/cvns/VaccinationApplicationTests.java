@@ -1,0 +1,1 @@
+package com.cvns;import org.junit.jupiter.api.Test;class VaccinationApplicationTests{@Test void projectFilesCreated(){}}

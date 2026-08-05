@@ -1,0 +1,2 @@
+package com.cvns.security;import org.springframework.security.core.userdetails.*;import org.springframework.stereotype.Service;import com.cvns.repository.UserRepository;import lombok.RequiredArgsConstructor;
+@Service @RequiredArgsConstructor public class CustomUserDetailsService implements UserDetailsService{private final UserRepository repo;public UserDetails loadUserByUsername(String email){return new CustomUserDetails(repo.findByEmail(email).orElseThrow(()->new UsernameNotFoundException("User not found")));}}

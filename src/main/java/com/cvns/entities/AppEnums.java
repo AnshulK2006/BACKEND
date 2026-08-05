@@ -1,0 +1,2 @@
+package com.cvns.entities;
+public final class AppEnums { private AppEnums(){} public enum UserRole{ROLE_PARENT,ROLE_ADMIN,ROLE_CLINIC} public enum Gender{MALE,FEMALE,OTHER} public enum BloodGroup{A_POSITIVE,A_NEGATIVE,B_POSITIVE,B_NEGATIVE,AB_POSITIVE,AB_NEGATIVE,O_POSITIVE,O_NEGATIVE,UNKNOWN} public enum VaccinationStatus{PENDING,COMPLETED,MISSED} public enum AppointmentStatus{BOOKED,ACCEPTED,REJECTED,CANCELLED,COMPLETED} public enum NotificationType{GENERAL,VACCINATION_REMINDER,APPOINTMENT,VACCINATION_COMPLETED} }

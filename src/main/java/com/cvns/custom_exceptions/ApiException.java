@@ -1,0 +1,1 @@
+package com.cvns.custom_exceptions;public class ApiException extends RuntimeException{public ApiException(String m){super(m);}}

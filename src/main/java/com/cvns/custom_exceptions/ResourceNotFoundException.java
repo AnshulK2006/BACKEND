@@ -1,0 +1,1 @@
+package com.cvns.custom_exceptions;public class ResourceNotFoundException extends RuntimeException{public ResourceNotFoundException(String m){super(m);}}

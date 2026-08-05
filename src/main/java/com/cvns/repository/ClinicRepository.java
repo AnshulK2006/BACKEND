@@ -1,0 +1,2 @@
+package com.cvns.repository;import java.util.*;import org.springframework.data.jpa.repository.JpaRepository;import com.cvns.entities.Clinic;
+public interface ClinicRepository extends JpaRepository<Clinic,Long>{Optional<Clinic> findByOwnerId(Long ownerId);List<Clinic> findByActiveTrueAndVerifiedTrueOrderByNameAsc();List<Clinic> findByNameContainingIgnoreCaseOrCityContainingIgnoreCaseOrderByNameAsc(String a,String b);}

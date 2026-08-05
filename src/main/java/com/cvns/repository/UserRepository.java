@@ -1,0 +1,2 @@
+package com.cvns.repository;import java.util.*;import org.springframework.data.jpa.repository.JpaRepository;import com.cvns.entities.*;import com.cvns.entities.AppEnums.UserRole;
+public interface UserRepository extends JpaRepository<User,Long>{Optional<User> findByEmail(String email);boolean existsByEmail(String email);boolean existsByPhone(String phone);long countByUserRole(UserRole role);List<User> findByUserRoleOrderByFirstNameAsc(UserRole role);}
